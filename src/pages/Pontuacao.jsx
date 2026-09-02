@@ -1,0 +1,3 @@
+import PageHero from '../components/PageHero';
+import EmptyState from '../components/EmptyState';
+export default function Pontuacao(){return <><PageHero eyebrow="GAMIFICAÇÃO" title="Sua pontuação, sem números inventados." text="A pontuação depende da quantidade e do tipo/material descartado. O cálculo definitivo pertence ao backend."/><section className="dashboard-section"><div className="container-xl"><div className="score-panel"><span>Pontos acumulados</span><strong>—</strong><p>Aguardando integração com a regra real de pontuação.</p></div><EmptyState icon="trophy" title="A evolução aparecerá aqui" text="O layout está preparado para receber a pontuação real do usuário quando o endpoint correspondente estiver disponível."/></div></section></>}

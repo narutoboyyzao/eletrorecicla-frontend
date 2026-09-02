@@ -1,0 +1,3 @@
+import PageHero from '../components/PageHero';
+import EmptyState from '../components/EmptyState';
+export default function Ranking(){return <><PageHero eyebrow="RANKING" title="Classificação por pontuação" text="A estrutura existe sem criar usuários, posições ou valores fictícios."/><section className="dashboard-section"><div className="container-xl"><div className="table-shell"><div className="table-head"><span>Posição</span><span>Usuário</span><span>Pontuação</span></div><EmptyState icon="trophy" title="Ranking aguardando dados" text="As posições serão apresentadas quando a API disponibilizar a classificação real."/></div></div></section></>}

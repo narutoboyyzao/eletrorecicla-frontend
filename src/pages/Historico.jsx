@@ -1,0 +1,3 @@
+import PageHero from '../components/PageHero';
+import EmptyState from '../components/EmptyState';
+export default function Historico(){return <><PageHero eyebrow="HISTÓRICO" title="Cada descarte, registrado individualmente." text="A interface segue os campos definidos no caso de uso: data, local, material, quantidade em kg e pontuação."/><section className="dashboard-section"><div className="container-xl"><div className="table-shell"><div className="history-head"><span>Data</span><span>Local</span><span>Material</span><span>Quantidade</span><span>Pontos</span></div><EmptyState icon="history" title="Nenhum registro carregado" text="O backend atual ainda não fornece todos os dados necessários para preencher esta tabela sem suposições."/></div></div></section></>}
