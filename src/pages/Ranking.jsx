@@ -1,7 +1,6 @@
-import { Medal } from 'lucide-react'
-import EmptyState from '../components/EmptyState'
+import { Award, Medal, UserRound } from 'lucide-react'
 import PageHeading from '../components/PageHeading'
 
 export default function Ranking() {
-  return <div className="page"><PageHeading eyebrow="Classificação" title="Ranking" description="A classificação será organizada pela pontuação acumulada." /><section className="surface"><div className="ranking-row ranking-header"><span>Posição</span><span>Usuário</span><span>Pontuação</span></div><EmptyState icon={Medal} title="Ranking ainda sem dados" text="A lista de usuários e a posição da sua conta serão exibidas quando a API estiver disponível." /></section></div>
+  return <div className="page ranking-page"><PageHeading eyebrow="Classificação por pontos" title="Ranking" description="Compare a participação dos usuários conforme a pontuação acumulada." /><section className="ranking-feature"><div><p className="section-label">Sua posição</p><h2>Aguardando dados</h2><p>Sua colocação será identificada após o carregamento da conta e das pontuações.</p></div><Medal size={70} /></section><section className="surface ranking-board"><div className="panel-heading"><div><p className="section-label">Classificação geral</p><h2>Usuários com mais pontos</h2></div><span className="api-tag">Atualizado pela API</span></div><div className="ranking-table-head"><span>Posição</span><span>Usuário</span><span>Pontuação</span></div><div className="ranking-waiting">{[1, 2, 3].map(position => <div className="ranking-placeholder" key={position}><span className="position-slot">{position}</span><span className="user-slot"><UserRound size={18} /> Aguardando usuário</span><span className="score-slot">--</span></div>)}</div><div className="ranking-note"><Award size={20} /><p><strong>Classificação sem valores fictícios</strong><br />Os nomes e pontos serão ordenados somente quando o backend fornecer os dados.</p></div></section></div>
 }
