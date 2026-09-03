@@ -1,5 +1,0 @@
-import { Link } from 'react-router-dom';
-import PageHero from '../components/PageHero';
-import EmptyState from '../components/EmptyState';
-import Icon from '../components/Icon';
-export default function Perfil(){return <><PageHero eyebrow="MINHA CONTA" title="Perfil" text="Uma visão organizada dos dados pessoais e atalhos previstos para o usuário."/><section className="dashboard-section"><div className="container-xl dashboard-grid"><aside className="profile-card"><div className="avatar-placeholder"><Icon name="user" size={34}/></div><h3>Dados do usuário</h3><p>As informações serão exibidas após a integração com a API.</p><Link to="/seguranca" className="outline-action"><Icon name="shield"/> Configurar segurança</Link></aside><div className="dashboard-main"><div className="metric-grid"><div><span>Total descartado</span><strong>— kg</strong><small>Aguardando dados</small></div><div><span>Pontuação</span><strong>—</strong><small>Aguardando dados</small></div></div><EmptyState icon="history" title="Histórico ainda não carregado" text="Os registros individuais aparecerão aqui quando o frontend estiver conectado ao backend."/></div></div></section></>}

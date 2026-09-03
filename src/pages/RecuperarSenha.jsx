@@ -1,4 +1,0 @@
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import AuthShell from '../components/AuthShell';
-export default function RecuperarSenha(){const {register,handleSubmit,formState:{errors}}=useForm();return <AuthShell title="Recupere sua senha" text="A tela está pronta para o fluxo futuro de solicitação por email e código."><form onSubmit={handleSubmit(()=>{})} className="auth-form"><label>Email da conta<input type="email" {...register('email',{required:'Informe seu email.'})}/>{errors.email&&<small>{errors.email.message}</small>}</label><button className="auth-submit">Continuar</button><p className="auth-switch"><Link to="/login">Voltar para o login</Link></p><div className="form-info">Nenhum email ou código é enviado nesta etapa do projeto.</div></form></AuthShell>}

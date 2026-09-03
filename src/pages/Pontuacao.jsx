@@ -1,3 +1,7 @@
-import PageHero from '../components/PageHero';
-import EmptyState from '../components/EmptyState';
-export default function Pontuacao(){return <><PageHero eyebrow="GAMIFICAÇÃO" title="Sua pontuação, sem números inventados." text="A pontuação depende da quantidade e do tipo/material descartado. O cálculo definitivo pertence ao backend."/><section className="dashboard-section"><div className="container-xl"><div className="score-panel"><span>Pontos acumulados</span><strong>—</strong><p>Aguardando integração com a regra real de pontuação.</p></div><EmptyState icon="trophy" title="A evolução aparecerá aqui" text="O layout está preparado para receber a pontuação real do usuário quando o endpoint correspondente estiver disponível."/></div></section></>}
+import { BarChart3, Info } from 'lucide-react'
+import EmptyState from '../components/EmptyState'
+import PageHeading from '../components/PageHeading'
+
+export default function Pontuacao() {
+  return <div className="page"><PageHeading eyebrow="Participação sustentável" title="Minha pontuação" description="Acompanhe os pontos creditados pelos seus descartes." /><div className="stat-grid"><div className="stat surface"><div className="stat-label">Pontos acumulados</div><div className="stat-value placeholder-value">A carregar</div></div><div className="stat surface"><div className="stat-label">Quantidade descartada</div><div className="stat-value placeholder-value">A carregar</div></div><div className="stat surface"><div className="stat-label">Posição no ranking</div><div className="stat-value placeholder-value">A carregar</div></div></div><section className="surface"><EmptyState icon={BarChart3} title="Pontuação aguardando integração" text="Os valores serão calculados pelo backend conforme a quantidade e o tipo de material descartado." /></section><div className="map-hint mt-3"><Info size={17} className="me-2" />O frontend não calcula pontos. A regra será aplicada pelo backend.</div></div>
+}

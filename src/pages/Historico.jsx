@@ -1,3 +1,7 @@
-import PageHero from '../components/PageHero';
-import EmptyState from '../components/EmptyState';
-export default function Historico(){return <><PageHero eyebrow="HISTÓRICO" title="Cada descarte, registrado individualmente." text="A interface segue os campos definidos no caso de uso: data, local, material, quantidade em kg e pontuação."/><section className="dashboard-section"><div className="container-xl"><div className="table-shell"><div className="history-head"><span>Data</span><span>Local</span><span>Material</span><span>Quantidade</span><span>Pontos</span></div><EmptyState icon="history" title="Nenhum registro carregado" text="O backend atual ainda não fornece todos os dados necessários para preencher esta tabela sem suposições."/></div></div></section></>}
+import { Clock3 } from 'lucide-react'
+import EmptyState from '../components/EmptyState'
+import PageHeading from '../components/PageHeading'
+
+export default function Historico() {
+  return <div className="page"><PageHeading eyebrow="Seus descartes" title="Histórico" description="Cada descarte registrado aparecerá individualmente nesta lista." /><section className="surface table-responsive"><table className="table align-middle"><thead><tr><th>Data</th><th>Local</th><th>Material</th><th>Quantidade</th><th>Pontos</th></tr></thead><tbody><tr><td colSpan="5" className="p-0"><EmptyState icon={Clock3} title="Nenhum registro disponível" text="O histórico será preenchido com os descartes fornecidos pela API." /></td></tr></tbody></table></section></div>
+}
